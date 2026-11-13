@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JSecurity acquires Mammoth Cyber technology</title>
+<meta name="description" content="JSecurity has acquired the technology and intellectual property of Mammoth Cyber.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F9FB;
+    --ink: #17212B;
+    --muted: #55626F;
+    --steel: #2F5D7C;
+    --line: #D3DCE4;
+    --panel: #ECF1F5;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #121A22;
+      --ink: #E8EEF3;
+      --muted: #9AA8B5;
+      --steel: #8FB8D6;
+      --line: #2C3A47;
+      --panel: #19232D;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { width: 100%; max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
+
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 4.5rem; }
+  .lockup { display: flex; align-items: center; gap: .75rem; font-weight: 600; letter-spacing: -.01em; }
+  .lockup .from { color: var(--muted); font-weight: 500; }
+  .lockup .join { width: 1.75rem; height: 1px; background: var(--steel); }
+
+  main { flex: 1; display: flex; align-items: center; padding: clamp(3rem, 10vh, 7rem) 0; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: end; }
+
+  h1 {
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(2.6rem, 6.5vw, 5rem);
+    line-height: 1.04;
+    letter-spacing: -.02em;
+    max-width: 14ch;
+  }
+  .lede { margin-top: 1.75rem; font-size: 1.1875rem; color: var(--muted); max-width: 34rem; }
+
+  .panel { background: var(--panel); border-left: 2px solid var(--steel); padding: 1.75rem 1.75rem 2rem; }
+  .panel h2 { font-size: 1rem; font-weight: 600; margin-bottom: .75rem; }
+  .panel p { color: var(--muted); font-size: 1rem; }
+  .panel p + p { margin-top: .75rem; }
+  .actions { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-block; padding: .7rem 1.15rem; border-radius: 3px;
+    font-weight: 600; font-size: .95rem; text-decoration: none;
+    border: 1px solid var(--steel);
+  }
+  .btn.primary { background: var(--steel); color: var(--paper); }
+  .btn.secondary { color: var(--steel); }
+  .btn:hover { filter: brightness(1.08); }
+  a:focus-visible { outline: 2px solid var(--steel); outline-offset: 3px; }
+
+
+  h1, .lede, .panel { animation: rise .7s ease-out both; }
+  .lede { animation-delay: .12s; }
+  .panel { animation-delay: .24s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { h1, .lede, .panel { animation: none; } }
+
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; }
+    .lede { font-size: 1.0625rem; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="lockup" aria-label="Mammoth Cyber technology, now owned by JSecurity">
+        <span class="from">Mammoth Cyber</span>
+        <span class="join" aria-hidden="true"></span>
+        <span>JSecurity</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <h1>JSecurity has acquired Mammoth Cyber’s technology.</h1>
+        <p class="lede">The acquisition includes the Mammoth Cyber Enterprise Browser and its related intellectual property.</p>
+      </div>
+
+      <aside class="panel">
+        <h2>Looking for Mammoth Cyber Enterprise Browser?</h2>
+        <p>For information about the technology and what comes next, visit JSecurity.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://jsecurity.co.jp/">Visit JSecurity</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+</body>
+</html>
